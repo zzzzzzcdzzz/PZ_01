@@ -79,13 +79,13 @@ void FahrenheitCelsius(float temperature, char CF)
 
 	if (CF == 'C' || CF == 'c')
 	{
-		temp = (temperature - 32) / 1.8f;
+		temp = (temperature * 1.8f) + 32; // °F = (°C * 1.8) + 32
 		std::cout << std::endl << temperature << " C = " << temp << " F" << std::endl;
 	}
 
 	if (CF == 'F' || CF == 'f')
 	{
-		temp = (temperature * 1.8f) + 32;
+		temp = (temperature - 32) / 1.8f; // °C = (°F - 32) / 1.8
 		std::cout << std::endl << temperature << " F = " << temp << " C" << std::endl;
 	}
 }
