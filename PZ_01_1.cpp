@@ -51,20 +51,20 @@ int main()
 
 		switch (App)
 		{
-			case 1:
-			AppOne(temperature, tempChar);
-			break;
+		case 1:
+		AppOne(temperature, tempChar);
+		break;
 
-			case 2:
-			AppTwo(sizeArray, tempChar);
-			break;
+		case 2:
+		AppTwo(sizeArray, tempChar);
+		break;
 
-			case 3:
-			AppThree(sizeArray);
-			break;
+		case 3:
+		AppThree(sizeArray);
+		break;
 
-			default:
-			break;
+		default:
+		break;
 		}
 
 		bContinue(tempChar, bcontinue);
@@ -138,12 +138,20 @@ void UniqueArray(int sizeArray)
 		sizeArray = -sizeArray;
 	}
 
+	int temp = 0;
 	int* arr = new int[sizeArray];
 
-	for (int i = 0; i < sizeArray; ++i)
+	/*for (int i = 0; i < sizeArray; ++i)
 	{
 		arr[i] = rand() % 5 + 1;
 		std::cout << "The value of array[" << i << "] = " << arr[i] << std::endl;
+	}*/
+
+	for (int i = 0; i < sizeArray; ++i)
+	{
+		std::cout << "Enter a value for array[" << i << "]: ";
+		std::cin >> temp;
+		arr[i] = temp;
 	}
 
 	std::vector<int> vec(arr, arr + sizeArray);
